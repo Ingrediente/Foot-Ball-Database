@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+	int t;
+	scanf("%d",&t);
+	int k[t];
+	int c[t];
+	int s[t];
+	int j;
+	for(j=0;j<t;j++)
+	{
+		scanf("%d %d %d",&k[j],&c[j],&s[j]);
+	}
+}
+void permutate()
+{
+	
+}

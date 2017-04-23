@@ -1,0 +1,17 @@
+                                                         COMPLEX QUERIES
+Q)Retrieve The information of the  													 
+1)SELECT fname, lname, team_name, position 
+FROM player P, matches M 
+WHERE (P.team_name = M.team1 OR P.team_name = M.team2 ) AND P.position ='Goal-keeper' AND M.date = '14-9-2015' ; 
+
+2)
+SELECT team_name
+FROM player
+WHERE salary = (SELECT DISTINCT TOP(1)   
+FROM 
+(SELECT team_name, AVG(salary)
+FROM player
+GROUP BY team_name
+ORDER BY salary DESCENDING )
+)
+3)
